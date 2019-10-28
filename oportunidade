@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+
+import sys
+import requests
+import os
+
+server_addr = os.environ['server_addr']
+
+
+if sys.argv[1] == "listar":
+    r = requests.get(server_addr+'opts')
+    print(r)
+elif sys.argv[1] == "buscar":
+    requests.get(server_addr+"opt/"+sys[1])
+elif sys.argv[1] == "apagar":
+    request.delete(server_addr+'opts')
+elif sys.argv[1] == "atualizar":
+    request.put(server_addr+"opt/"+sys[1])
+elif sys.argv[1] == "adicionar":
+    request.post(server_addr+'opts')
